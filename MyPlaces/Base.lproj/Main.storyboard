@@ -295,6 +295,9 @@
                                     <segment title="Date"/>
                                     <segment title="Name"/>
                                 </segments>
+                                <connections>
+                                    <action selector="sortSelection:" destination="f6q-TQ-aLp" eventType="valueChanged" id="zmx-kl-oH2"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -310,7 +313,11 @@
                         <viewLayoutGuide key="safeArea" id="Nyp-vk-LYT"/>
                     </view>
                     <navigationItem key="navigationItem" title="My Places" largeTitleDisplayMode="never" id="V7q-lV-hmf">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="AZ" id="LMz-TO-8eH"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="AZ" id="LMz-TO-8eH">
+                            <connections>
+                                <action selector="reversedSorting:" destination="f6q-TQ-aLp" id="cxG-M4-asp"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="LGu-Av-QZl">
                             <connections>
                                 <segue destination="yb9-LO-baX" kind="presentation" id="URU-b3-Czs"/>
@@ -318,6 +325,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="reversedSortingButton" destination="LMz-TO-8eH" id="hSN-zP-Jaq"/>
+                        <outlet property="segmentedControl" destination="oIC-vd-gk2" id="rON-CF-BhQ"/>
                         <outlet property="tableView" destination="C3S-KC-W8H" id="cnd-6e-0fI"/>
                     </connections>
                 </viewController>
