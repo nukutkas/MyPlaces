@@ -21,6 +21,7 @@ class MapViewController: UIViewController {
         setupPlacemark()
     }
     @IBAction func closeVC() {
+        dismiss(animated: true)
     }
     
     private func setupPlacemark() {
