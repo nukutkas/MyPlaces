@@ -19,11 +19,11 @@ class NewPlaceViewController: UITableViewController {
     @IBOutlet var placeLocation: UITextField!
     @IBOutlet var placeType: UITextField!
     @IBOutlet var ratingControl: RatingControl!
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-     
+        
         tableView.tableFooterView = UIView(frame:CGRect(x: 0,
                                                         y: 0,
                                                         width: tableView.frame.size.width,
@@ -33,7 +33,7 @@ class NewPlaceViewController: UITableViewController {
         setupEditScreen()
     }
     
-// MARK: Table view delegate
+    // MARK: Table view delegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
             
@@ -75,13 +75,20 @@ class NewPlaceViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier != "showMap" { return }
+        guard
+            let identifier = segue.identifier,
+            let mapVC = segue.destination as? MapViewController
+            else { return }
         
-        let mapVC = segue.destination as! MapViewController
-        mapVC.place.name = placeName.text!
-        mapVC.place.location = placeLocation.text
-        mapVC.place.type = placeType.text
-        mapVC.place.imageData = placeImage.image?.pngData()
+        mapVC.incomeSegueIdentifier = identifier
+        mapVC.mapViewControllerDelegate = self
+        if identifier == "showPlace"{
+            mapVC.place.name = placeName.text!
+            mapVC.place.location = placeLocation.text
+            mapVC.place.type = placeType.text
+            mapVC.place.imageData = placeImage.image?.pngData()
+        }
+        
     }
     
     func savePlace() {
@@ -185,4 +192,13 @@ extension NewPlaceViewController: UIImagePickerControllerDelegate, UINavigationC
         
         dismiss(animated: true, completion: nil)
     }
+}
+
+extension NewPlaceViewController: MapViewControllerDelegate {
+    
+    func getAddress(_ address: String?) {
+        placeLocation.text = address
+    }
+    
+    
 }
