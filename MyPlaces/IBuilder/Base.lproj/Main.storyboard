@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DDS-t7-PRa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DDS-t7-PRa">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,7 +16,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="b3K-0u-iGR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
                         <sections>
                             <tableViewSection id="vR3-kI-ZHE">
@@ -311,7 +313,7 @@
                                                 </stackView>
                                                 <view contentMode="scaleToFill" placeholderIntrinsicWidth="90" placeholderIntrinsicHeight="14" translatesAutoresizingMaskIntoConstraints="NO" id="Xx6-uX-Av2" customClass="CosmosView" customModule="Cosmos">
                                                     <rect key="frame" x="316" y="35.666666666666664" width="90" height="14"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="90" id="QCa-uK-QLW"/>
                                                     </constraints>
@@ -361,6 +363,7 @@
                                 </connections>
                             </segmentedControl>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Nyp-vk-LYT"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="oIC-vd-gk2" firstAttribute="trailing" secondItem="Nyp-vk-LYT" secondAttribute="trailing" id="1LI-9c-eiX"/>
@@ -371,7 +374,6 @@
                             <constraint firstItem="oIC-vd-gk2" firstAttribute="leading" secondItem="Nyp-vk-LYT" secondAttribute="leading" id="Ym0-n7-zqE"/>
                             <constraint firstItem="C3S-KC-W8H" firstAttribute="trailing" secondItem="Nyp-vk-LYT" secondAttribute="trailing" id="fKv-r6-XqK"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Nyp-vk-LYT"/>
                     </view>
                     <navigationItem key="navigationItem" title="My Places" largeTitleDisplayMode="never" id="V7q-lV-hmf">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="AZ" id="LMz-TO-8eH">
@@ -433,11 +435,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ug9-Eg-VhS">
-                                <rect key="frame" x="172.66666666666666" y="774" width="69" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ug9-Eg-VhS">
+                                <rect key="frame" x="172" y="774" width="70" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Done">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" systemColor="darkTextColor"/>
                                 </state>
                                 <connections>
                                     <action selector="doneButtonPressed" destination="9sP-UY-NmR" eventType="touchUpInside" id="zyj-gg-GO8"/>
@@ -466,6 +468,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="bpG-8K-QFN"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="nrF-hT-McF" firstAttribute="top" secondItem="tnv-Mm-1LO" secondAttribute="bottom" constant="-217" id="18z-Op-buf"/>
@@ -486,7 +489,6 @@
                             <constraint firstItem="ug9-Eg-VhS" firstAttribute="centerX" secondItem="Xqp-6x-mZp" secondAttribute="centerX" id="uV0-7r-SlQ"/>
                             <constraint firstItem="bpG-8K-QFN" firstAttribute="bottom" secondItem="55A-uw-AoF" secondAttribute="bottom" constant="136" id="vCZ-x4-mVy"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="bpG-8K-QFN"/>
                     </view>
                     <connections>
                         <outlet property="addressLabel" destination="tnv-Mm-1LO" id="kGV-o5-Pxx"/>
@@ -501,6 +503,14 @@
             <point key="canvasLocation" x="2418.840579710145" y="105.80357142857143"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="Xx6-uX-Av2">
+            <size key="intrinsicContentSize" width="90" height="14"/>
+        </designable>
+        <designable name="ZDh-Cx-vUl">
+            <size key="intrinsicContentSize" width="252" height="44"/>
+        </designable>
+    </designables>
     <inferredMetricsTieBreakers>
         <segue reference="lw1-MF-vP7"/>
         <segue reference="Vm3-fk-TMo"/>
@@ -516,5 +526,11 @@
         <image name="emptyStar" width="255" height="256"/>
         <image name="filledStar" width="237.5" height="238"/>
         <image name="map" width="50" height="50"/>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
