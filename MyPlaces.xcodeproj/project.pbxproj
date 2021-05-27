@@ -24,6 +24,7 @@
 		E58690AB26602B7F00E58627 /* Screenshot01.png in Resources */ = {isa = PBXBuildFile; fileRef = E58690A826602B7F00E58627 /* Screenshot01.png */; };
 		E58690B226602BC900E58627 /* Screenshot02.png in Resources */ = {isa = PBXBuildFile; fileRef = E58690B126602BC900E58627 /* Screenshot02.png */; };
 		E58690B526602BD000E58627 /* Screenshot03.png in Resources */ = {isa = PBXBuildFile; fileRef = E58690B426602BD000E58627 /* Screenshot03.png */; };
+		E58690B826602EC100E58627 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E58690B726602EC100E58627 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		E58690A826602B7F00E58627 /* Screenshot01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot01.png; sourceTree = "<group>"; };
 		E58690B126602BC900E58627 /* Screenshot02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot02.png; sourceTree = "<group>"; };
 		E58690B426602BD000E58627 /* Screenshot03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot03.png; sourceTree = "<group>"; };
+		E58690B726602EC100E58627 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				E553760C24F7CD1B003DDD5D /* MyPlaces */,
+				E58690B726602EC100E58627 /* README.md */,
 				E553760B24F7CD1B003DDD5D /* Products */,
 				A45FA3C992B0A52F1422DBE4 /* Pods */,
 				42A2B191BFF827048769350F /* Frameworks */,
@@ -232,6 +235,7 @@
 				E553761A24F7CD1C003DDD5D /* LaunchScreen.storyboard in Resources */,
 				E553761724F7CD1C003DDD5D /* Assets.xcassets in Resources */,
 				E58690B526602BD000E58627 /* Screenshot03.png in Resources */,
+				E58690B826602EC100E58627 /* README.md in Resources */,
 				E58690AB26602B7F00E58627 /* Screenshot01.png in Resources */,
 				E58690B226602BC900E58627 /* Screenshot02.png in Resources */,
 				E553761524F7CD1B003DDD5D /* Main.storyboard in Resources */,
